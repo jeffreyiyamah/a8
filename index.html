@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A8 Labs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="logo">A8 Labs</h1>
+            <p class="tagline">We find failures in autonomous systems before the road does.</p>
+            <p class="product-line">We simulate the edge-case failures that kill L3+ autonomous systems in production.</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="left-column">
+                <h2 class="section-title">20,000 robotaxis deploy next year. Current validation will miss the failures that matter.</h2>
+                <div class="problem-list">
+                    <p>Waymo's validation suite didn't catch the construction cone failures that killed their Phoenix expansion.</p>
+                    <p>Tesla's FSD testing missed the phantom braking scenarios now forcing highway takeovers.</p>
+                    <p>Cruise's validation framework failed to predict the dragging incident that shut down their entire program.</p>
+                    <p>Standard scenario libraries don't contain the compound failures happening in real deployments.</p>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <h2 class="section-title">We surface the failures other validation tools miss.</h2>
+                <div class="approach-description">
+                    <p>Our simulation platform discovers perception-planner failure modes by systematically exploring combinations that break in production but pass standard testing.</p>
+                    <p>We generate scenarios where sensor occlusion, weather conditions, and multi-agent interactions create the exact conditions that cause stack failures.</p>
+                    <p>Currently validating this approach with L3+ teams at defense contractors and Tier 1 suppliers.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- CTA -->
+        <footer class="cta">
+            <p class="cta-text">We work with teams building L3+ autonomy stacks for real deployment.</p>
+            <a href="#" class="cta-button">Request validation analysis →</a>
+            <p class="cta-subtext">Defense autonomy programs, AV startups, and Tier 1 advanced engineering teams.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Add subtle cursor effect
+        document.addEventListener('mousemove', (e) => {
+            const cursor = document.querySelector('.cursor');
+            if (!cursor) {
+                const newCursor = document.createElement('div');
+                newCursor.className = 'cursor';
+                newCursor.style.cssText = `
+                    position: fixed;
+                    width: 20px;
+                    height: 20px;
+                    background: rgba(0,0,0,0.1);
+                    border-radius: 50%;
+                    pointer-events: none;
+                    z-index: 9999;
+                    transition: transform 0.1s ease;
+                `;
+                document.body.appendChild(newCursor);
+            }
+            
+            const cursorElement = document.querySelector('.cursor');
+            cursorElement.style.left = e.clientX - 10 + 'px';
+            cursorElement.style.top = e.clientY - 10 + 'px';
+        });
+    </script>
+</body>
+</html>

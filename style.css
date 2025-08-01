@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: #ffffff;
+    color: #000000;
+    line-height: 1.4;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2vh 40px;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: minmax(auto, 25vh) 1fr minmax(auto, 20vh);
+    gap: 1.5vh;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    border-bottom: 1px solid #000;
+    padding-bottom: 1.5vh;
+}
+
+.logo {
+    font-size: clamp(32px, 6vh, 56px);
+    font-weight: normal;
+    letter-spacing: -2px;
+    margin-bottom: 1vh;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 0.2s forwards;
+}
+
+.tagline {
+    font-size: clamp(14px, 2.2vh, 18px);
+    font-weight: normal;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 0.6s forwards;
+}
+
+.product-line {
+    font-size: clamp(12px, 1.8vh, 15px);
+    font-weight: normal;
+    margin-top: 0.5vh;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 1s forwards;
+}
+
+/* Main Content */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6vw;
+    align-items: start;
+    overflow: hidden;
+}
+
+.left-column {
+    border-right: 1px solid #000;
+    padding-right: 3vw;
+}
+
+.right-column {
+    padding-left: 3vw;
+}
+
+.section-title {
+    font-size: clamp(18px, 3vh, 24px);
+    margin-bottom: 1.5vh;
+    font-weight: normal;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 1s forwards;
+}
+
+/* Problem Section */
+.problem-list {
+    font-size: clamp(13px, 1.9vh, 16px);
+}
+
+.problem-list p {
+    margin-bottom: 1vh;
+    padding-left: 20px;
+    position: relative;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.problem-list p:before {
+    content: "—";
+    position: absolute;
+    left: 0;
+}
+
+.problem-list p:nth-child(1) { animation-delay: 1.2s; }
+.problem-list p:nth-child(2) { animation-delay: 1.4s; }
+.problem-list p:nth-child(3) { animation-delay: 1.6s; }
+.problem-list p:nth-child(4) { animation-delay: 1.8s; }
+
+/* Approach Section */
+.approach-description {
+    font-size: clamp(13px, 1.9vh, 16px);
+}
+
+.approach-description p {
+    margin-bottom: 1vh;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.approach-description p:nth-child(1) { animation-delay: 1.4s; }
+.approach-description p:nth-child(2) { animation-delay: 1.6s; }
+.approach-description p:nth-child(3) { animation-delay: 1.8s; }
+
+/* CTA Section */
+.cta {
+    text-align: center;
+    border-top: 1px solid #000;
+    padding-top: 1.5vh;
+}
+
+.cta-text {
+    font-size: clamp(16px, 2.4vh, 20px);
+    margin-bottom: 1.5vh;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 2s forwards;
+}
+
+.cta-button {
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(16px, 2.2vh, 18px);
+    padding: 1.5vh 24px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #000;
+    transition: all 0.3s ease;
+    margin-bottom: 1vh;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 2.2s forwards;
+}
+
+.cta-button:hover {
+    background: #fff;
+    color: #000;
+    transform: translateX(4px);
+}
+
+.cta-subtext {
+    font-size: clamp(12px, 1.8vh, 14px);
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 2.4s forwards;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 3vh 20px;
+        gap: 2vh;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 3vh;
+    }
+
+    .left-column {
+        border-right: none;
+        border-bottom: 1px solid #000;
+        padding-right: 0;
+        padding-bottom: 2vh;
+    }
+
+    .right-column {
+        padding-left: 0;
+    }
+
+    .header {
+        padding-bottom: 2vh;
+    }
+
+    .cta {
+        padding-top: 2vh;
+    }
+}
+
+/* Very short screens */
+@media (max-height: 600px) {
+    .container {
+        padding: 2vh 40px;
+        gap: 1.5vh;
+    }
+    
+    .header {
+        padding-bottom: 1.5vh;
+    }
+    
+    .cta {
+        padding-top: 1.5vh;
+    }
+    
+    .section-title {
+        margin-bottom: 1vh;
+    }
+    
+    .problem-list p,
+    .approach-description p {
+        margin-bottom: 1vh;
+    }
+}
+
+/* Extra short screens */
+@media (max-height: 500px) {
+    .container {
+        padding: 1vh 40px;
+        gap: 1vh;
+    }
+    
+    .logo {
+        margin-bottom: 0.5vh;
+    }
+    
+    .product-line {
+        margin-top: 0.5vh;
+    }
+}
