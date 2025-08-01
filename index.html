@@ -29,8 +29,8 @@
             <div class="right-column">
                 <h2 class="section-title">We surface the failures other validation tools miss.</h2>
                 <div class="approach-description">
-                    <p>Current validation methods miss the edge cases that matter most (the unknown unknowns) that cause real-world failures.</p>
                     <p>We're building systematic approaches to discover these hidden failure modes before they reach production.</p>
+                    <p>Current validation methods miss crucial unknown edge cases that end up causing real-world failures.</p>
                     <p>Our mission is to shift autonomy from statistically safe to culturally safe.</p>
 
                 </div>
@@ -40,35 +40,9 @@
         <!-- CTA -->
         <footer class="cta">
             <p class="cta-text">We're working with early partners to validate this approach. If you're building L3+ systems and want to find failures before deployment, let's talk.</p>
-            <a href="#" class="cta-button">Request validation analysis →</a>
+            <a href="#" class="cta-button">Schedule Partnership Call →</a>
             <p class="cta-subtext">AV startups, Tier 1 advanced engineering teams, and OEMs.</p>
         </footer>
     </div>
-
-    <script>
-        // Add subtle cursor effect
-        document.addEventListener('mousemove', (e) => {
-            const cursor = document.querySelector('.cursor');
-            if (!cursor) {
-                const newCursor = document.createElement('div');
-                newCursor.className = 'cursor';
-                newCursor.style.cssText = `
-                    position: fixed;
-                    width: 20px;
-                    height: 20px;
-                    background: rgba(0,0,0,0.1);
-                    border-radius: 50%;
-                    pointer-events: none;
-                    z-index: 9999;
-                    transition: transform 0.1s ease;
-                `;
-                document.body.appendChild(newCursor);
-            }
-            
-            const cursorElement = document.querySelector('.cursor');
-            cursorElement.style.left = e.clientX - 10 + 'px';
-            cursorElement.style.top = e.clientY - 10 + 'px';
-        });
-    </script>
 </body>
 </html>

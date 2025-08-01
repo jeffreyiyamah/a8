@@ -13,14 +13,21 @@ body {
     overflow: hidden;
 }
 
-.container {
+/* .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2vh 40px;
     height: 100vh;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
     gap: 0.5vh;
+} */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3vh 32px;  /* Add vertical breathing room */
+  display: flex;
+  flex-direction: column;
+  gap: 8vh; /* Spread child elements vertically */
 }
 
 /* Header */
@@ -58,7 +65,7 @@ body {
 .main-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 6vw;
+    gap: 5vw;
     align-items: start;
     overflow: hidden;
 }
@@ -93,12 +100,24 @@ body {
     animation: fadeInUp 1s ease-out forwards;
 }
 
+.approach-description  p {
+    margin-bottom: 1vh;
+    padding-left: 15px;
+    position: relative;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
 .problem-list p:before {
     content: "—";
     position: absolute;
     left: 0;
 }
-
+.approach-description p:before {
+    content: "—";
+    position: absolute;
+    left: 0;
+}
 .problem-list p:nth-child(1) { animation-delay: 1.2s; }
 .problem-list p:nth-child(2) { animation-delay: 1.4s; }
 .problem-list p:nth-child(3) { animation-delay: 1.6s; }
@@ -109,11 +128,11 @@ body {
     font-size: clamp(13px, 1.9vh, 16px);
 }
 
-.approach-description p {
+/* .approach-description p {
     margin-bottom: 1vh;
     opacity: 0;
     animation: fadeInUp 1s ease-out forwards;
-}
+} */
 
 .approach-description p:nth-child(1) { animation-delay: 1.4s; }
 .approach-description p:nth-child(2) { animation-delay: 1.6s; }
@@ -148,11 +167,11 @@ body {
     animation: fadeInUp 1s ease-out 2.2s forwards;
 }
 
-.cta-button:hover {
+/* .cta-button:hover {
     background: #fff;
     color: #000;
     transform: translateX(4px);
-}
+} */
 
 .cta-subtext {
     font-size: clamp(12px, 1.8vh, 14px);
