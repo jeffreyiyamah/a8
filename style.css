@@ -20,14 +20,14 @@ body {
     height: 100vh;
     display: grid;
     grid-template-rows: minmax(auto, 25vh) 1fr minmax(auto, 20vh);
-    gap: 1.5vh;
+    gap: 0.5vh;
 }
 
 /* Header */
 .header {
     text-align: center;
     border-bottom: 1px solid #000;
-    padding-bottom: 1.5vh;
+    padding-bottom: 0.8vh; /* Changed from 1.5vh */
 }
 
 .logo {
