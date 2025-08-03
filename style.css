@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +7,8 @@
 
 body {
     font-family: 'Courier New', Courier, monospace;
-    background: #ffffff;
-    color: #000000;
+    background: rgb(255, 255, 255);
+    color: black;
     line-height: 1.4;
     height: 100vh;
     overflow: hidden;
@@ -27,7 +28,7 @@ body {
   padding: 3vh 32px;  /* Add vertical breathing room */
   display: flex;
   flex-direction: column;
-  gap: 8vh; /* Spread child elements vertically */
+  gap: 6vh; /* Spread child elements vertically */
 }
 
 /* Header */
@@ -143,6 +144,7 @@ body {
     text-align: center;
     border-top: 1px solid #000;
     padding-top: 1.5vh;
+
 }
 
 .cta-text {
@@ -176,6 +178,7 @@ body {
 .cta-subtext {
     font-size: clamp(12px, 1.8vh, 14px);
     opacity: 0;
+    margin-top: 1.5vh;
     animation: fadeInUp 1s ease-out 2.4s forwards;
 }
 
